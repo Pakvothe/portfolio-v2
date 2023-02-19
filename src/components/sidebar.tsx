@@ -1,12 +1,15 @@
-import { useScrollBlock } from "@/hooks";
 import {
-  Bag,
-  EnvelopeOpen,
-  Flask,
-  House,
-  List,
-  UserCircle,
-} from "phosphor-react";
+  BagIcon,
+  CloseIcon,
+  FlaskIcon,
+  HouseIcon,
+  ListIcon,
+  OpenEmailIcon,
+  UserIcon,
+} from "@/assets/icons";
+import { useScrollBlock } from "@/hooks";
+import { colorMap } from "@/utils";
+
 import { FC, ReactNode, useCallback, useEffect, useState } from "react";
 
 interface NavigationMapProperties {
@@ -16,27 +19,27 @@ interface NavigationMapProperties {
 }
 const navigationMap: NavigationMapProperties[] = [
   {
-    icon: <House size={24} weight="bold" />,
+    icon: <HouseIcon color={colorMap.primary} size={24} weight={24} />,
     name: "Home",
     href: "#main",
   },
   {
-    icon: <UserCircle size={24} weight="bold" />,
+    icon: <UserIcon color={colorMap.primary} size={24} weight={24} />,
     name: "About me",
     href: "#me",
   },
   {
-    icon: <Bag size={24} weight="bold" />,
+    icon: <BagIcon color={colorMap.primary} size={24} weight={24} />,
     name: "Work",
     href: "#works",
   },
   {
-    icon: <Flask size={24} weight="bold" />,
+    icon: <FlaskIcon color={colorMap.primary} size={24} weight={24} />,
     name: "Projects",
     href: "#projects",
   },
   {
-    icon: <EnvelopeOpen size={24} weight="bold" />,
+    icon: <OpenEmailIcon color={colorMap.primary} size={24} weight={24} />,
     name: "Contact",
     href: "#contact",
   },
@@ -58,10 +61,12 @@ export const Sidebar: FC = () => {
   }, [allowScroll, blockScroll, showNav]);
 
   const MobileNavigationMenu: FC = () => (
-    <div className="md:hidden block fixed pr-7 w-[100%] h-screen bg-background/80 flex flex-col justify-center items-center z-20">
+    <div
+      onClick={toggleNav}
+      className="md:hidden block fixed pr-7 w-[100%] h-screen bg-primary/80 flex flex-col justify-center items-center z-20"
+    >
       {navigationMap.map((navigation) => (
         <a
-          onClick={toggleNav}
           key={navigation.name}
           href={navigation.href}
           className="flex items-center w-[75%] my-2 p-4 bg-background rounded-lg shadow-md shadow-primary/50 cursor-pointer hover:scale-105 ease-in duration-100"
@@ -80,7 +85,7 @@ export const Sidebar: FC = () => {
           <a
             key={navigation.name}
             href={navigation.href}
-            className="my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in duration-100 text-primary  hover:text-accent"
+            className="my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in duration-100"
           >
             {navigation.icon}
           </a>
@@ -91,12 +96,23 @@ export const Sidebar: FC = () => {
 
   return (
     <>
-      <List
-        size={32}
-        onClick={toggleNav}
-        weight="bold"
-        className="fixed top-4 right-4 z-[99] md:hidden text-secondary hover:text-accent cursor-pointer"
-      />
+      {showNav ? (
+        <CloseIcon
+          color={colorMap.background}
+          size={32}
+          onClick={toggleNav}
+          weight={24}
+          className="fixed cursor-pointer top-4 right-4 z-[99] hover:scale-105 ease-in duration-100 md:hidden"
+        />
+      ) : (
+        <ListIcon
+          color={colorMap.secondary}
+          size={32}
+          onClick={toggleNav}
+          weight={24}
+          className="fixed cursor-pointer top-4 right-4 z-[99] hover:scale-105 ease-in duration-100 md:hidden"
+        />
+      )}
       {showNav ? <MobileNavigationMenu /> : null}
 
       <DesktopNavigationSidebar />

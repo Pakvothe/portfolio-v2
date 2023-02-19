@@ -1,12 +1,13 @@
-import {
-  Envelope,
-  GithubLogo,
-  LinkedinLogo,
-  TwitterLogo,
-} from "phosphor-react";
 import { TypeAnimation } from "react-type-animation";
 import MAIN_IMAGE from "@/assets/main-image.webp";
 import { FC } from "react";
+import {
+  CloseEmailIcon,
+  GithubIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "@/assets/icons";
+import { colorMap } from "@/utils";
 
 const Title: FC = () => (
   <>
@@ -35,9 +36,11 @@ const Title: FC = () => (
 const SocialShortcuts: FC = () => (
   <div className="flex justify-between max-w-[250px] w-full mt-2">
     <a href="https://github.com/Pakvothe" target="_blank" rel="noreferrer">
-      <GithubLogo
+      <GithubIcon
+        color={colorMap.secondary}
+        weight={18}
         size={32}
-        className="cursor-pointer text-primary hover:text-accent"
+        className="cursor-pointer hover:scale-110 ease-in duration-100"
       />
     </a>
     <a
@@ -45,15 +48,19 @@ const SocialShortcuts: FC = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <LinkedinLogo
+      <LinkedInIcon
+        color={colorMap.secondary}
+        weight={18}
         size={32}
-        className="cursor-pointer text-primary hover:text-accent"
+        className="cursor-pointer hover:scale-110 ease-in duration-100"
       />
     </a>
     <a href="https://twitter.com/fortiz_dev" target="_blank" rel="noreferrer">
-      <TwitterLogo
+      <TwitterIcon
+        color={colorMap.secondary}
+        weight={18}
         size={32}
-        className="cursor-pointer text-primary hover:text-accent"
+        className="cursor-pointer hover:scale-110 ease-in duration-100"
       />
     </a>
     <a
@@ -61,9 +68,11 @@ const SocialShortcuts: FC = () => (
       target="_blank"
       rel="noreferrer"
     >
-      <Envelope
+      <CloseEmailIcon
+        color={colorMap.secondary}
+        weight={18}
         size={32}
-        className="cursor-pointer text-primary hover:text-accent"
+        className="cursor-pointer hover:scale-110 ease-in duration-100"
       />
     </a>
   </div>
@@ -73,7 +82,7 @@ export const MainSection: FC = () => {
   return (
     <div id="main">
       <img
-        className="w-full h-screen object-fit object-left scale-x-[- 1]"
+        className="w-full h-screen object-center object-cover object-left scale-x-[- 1]"
         src={MAIN_IMAGE}
         alt="https://cdnb.artstation.com/p/assets/images/images/032/655/025/medium/olya-kolosha-3.jpg?1607070929"
       />
