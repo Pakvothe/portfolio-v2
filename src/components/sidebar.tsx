@@ -85,7 +85,7 @@ export const Sidebar: FC = () => {
           <a
             key={navigation.name}
             href={navigation.href}
-            className="my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in duration-100"
+            className="flex items-center my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in duration-100"
           >
             {navigation.icon}
           </a>

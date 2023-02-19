@@ -21,7 +21,7 @@ const HighlightedProject: FC = () => (
       <div className="mb-2 flex items-center flex flex-wrap">
         <p className="mr-2 text-xl text-primary">const</p>
         <h2 className="text-center md:text-left text-2xl font-bold text-secondary">
-          Belo
+          beloApp
         </h2>
         <p className="ml-2 text-lg text-primary">{"= () =>"}</p>
         <a

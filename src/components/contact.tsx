@@ -10,8 +10,14 @@ export const ContactSection: FC = () => {
         Contact
       </h1>
       <p className="mt-2 mb-4 text-base font-normal text-secondary/70">
-        You can contact me by filling out the following form or by sending me an
-        email to{" "}
+        You can contact me by filling out the following form, through my{" "}
+        <a
+          href="#main"
+          className="underline font-semibold text-primary hover:text-accent"
+        >
+          social networks
+        </a>{" "}
+        or by sending me an email to{" "}
         <a
           href="mailto:fr.dv.ortiz@gmail.com?Subject=Job%20Offer"
           target="_blank"
