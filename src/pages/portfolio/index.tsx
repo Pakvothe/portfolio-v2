@@ -1,7 +1,9 @@
 import {
   AboutSection,
+  ContactSection,
   Layout,
   MainSection,
+  ProjectsSection,
   Sidebar,
   WorkSection,
 } from "@/components";
@@ -13,6 +15,8 @@ const PortfolioMainPage = () => {
       <MainSection />
       <AboutSection />
       <WorkSection />
+      <ProjectsSection />
+      <ContactSection />
     </Layout>
   );
 };

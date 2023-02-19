@@ -4,7 +4,7 @@ import { FC } from "react";
 const Work: FC<Works> = ({ name, year, duration, description, link }) => {
   return (
     <ol className="flex flex-col md:flex-row">
-      <li className="ml-4 mb-8">
+      <li className="mb-8">
         <p className="flex flex-wrap gap-4 items-center text-sm md-tex-sm">
           <span className="bg-accent py-2 px-4 rounded-lg font-semibold text-secondary">
             {year}
