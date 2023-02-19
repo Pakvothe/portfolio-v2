@@ -13,6 +13,7 @@ const Work: FC<Works> = ({ name, year, duration, description, link }) => {
             href={link}
             target="_blank"
             className="text-lg font-semibold text-primary hover:text-accent cursor-pointer"
+            rel="noreferrer"
           >
             {name}
           </a>

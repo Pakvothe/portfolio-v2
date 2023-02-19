@@ -1,4 +1,4 @@
-import { colorMap } from "@/utils";
+import { useScrollBlock } from "@/hooks";
 import {
   Bag,
   EnvelopeOpen,
@@ -7,7 +7,7 @@ import {
   List,
   UserCircle,
 } from "phosphor-react";
-import { FC, ReactNode, useCallback, useState } from "react";
+import { FC, ReactNode, useCallback, useEffect, useState } from "react";
 
 interface NavigationMapProperties {
   icon: ReactNode;
@@ -27,13 +27,13 @@ const navigationMap: NavigationMapProperties[] = [
   },
   {
     icon: <Bag size={24} weight="bold" />,
-    name: "Experience",
-    href: "#experience",
+    name: "Work",
+    href: "#works",
   },
   {
     icon: <Flask size={24} weight="bold" />,
-    name: "Works",
-    href: "#works",
+    name: "Projects",
+    href: "#projects",
   },
   {
     icon: <EnvelopeOpen size={24} weight="bold" />,
@@ -42,11 +42,20 @@ const navigationMap: NavigationMapProperties[] = [
   },
 ];
 export const Sidebar: FC = () => {
+  const [blockScroll, allowScroll] = useScrollBlock();
   const [showNav, setShowNav] = useState(false);
 
   const toggleNav = useCallback(() => {
     setShowNav((previous) => !previous);
   }, []);
+
+  useEffect(() => {
+    if (showNav) {
+      blockScroll();
+    } else {
+      allowScroll();
+    }
+  }, [allowScroll, blockScroll, showNav]);
 
   const MobileNavigationMenu: FC = () => (
     <div className="md:hidden block fixed pr-7 w-[100%] h-screen bg-background/80 flex flex-col justify-center items-center z-20">
