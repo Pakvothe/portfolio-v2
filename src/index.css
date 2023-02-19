@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Fira code";
+}
+
+.m-auto {
+  margin: auto;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.my-auto {
+  margin: auto 0;
+}
+.ml-auto {
+  margin: 0 0 0 auto;
+}
+.mr-auto {
+  margin: 0 auto 0 0;
+}
+.mt-auto {
+  margin: auto 0 0 0;
+}
+.mb-auto {
+  margin: 0 0 auto 0;
+}
