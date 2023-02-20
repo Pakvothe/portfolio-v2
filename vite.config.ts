@@ -37,7 +37,6 @@ export default defineConfig({
   plugins: [
     react(),
     viteCompression({
-      filter: /\.(ts|tsx|js|mjs|json|css|html)$/i,
       algorithm: "gzip",
       deleteOriginFile: true,
     }),
