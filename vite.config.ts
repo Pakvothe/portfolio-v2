@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import * as path from "path";
-import viteCompression from "vite-plugin-compression";
 import { viteObfuscateFile } from "vite-plugin-obfuscator";
 
 const obfuscator_options = {
@@ -34,14 +33,7 @@ const obfuscator_options = {
 };
 
 export default defineConfig({
-  plugins: [
-    react(),
-    viteCompression({
-      algorithm: "gzip",
-      deleteOriginFile: true,
-    }),
-    viteObfuscateFile(obfuscator_options),
-  ],
+  plugins: [react(), viteObfuscateFile(obfuscator_options)],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src/"),
