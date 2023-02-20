@@ -3,11 +3,7 @@ import { FC } from "react";
 
 const Work: FC<Works> = ({ name, year, duration, description, link }) => {
   return (
-    <ol
-      data-aos="fade"
-      data-aos-duration="700"
-      className="flex flex-col md:flex-row"
-    >
+    <ol className="flex flex-col md:flex-row">
       <li className="mb-8">
         <p className="flex flex-wrap gap-4 items-center text-sm md-tex-sm">
           <span className="bg-accent py-2 px-4 rounded-lg font-semibold text-secondary">
@@ -38,11 +34,7 @@ export const WorkSection: FC = () => {
       id="works"
       className="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
     >
-      <h1
-        data-aos="fade"
-        data-aos-duration="700"
-        className="mb-12 text-4xl font-bold text-center text-primary"
-      >
+      <h1 className="mb-12 text-4xl font-bold text-center text-primary">
         Work
       </h1>
       {workData.map((work) => (

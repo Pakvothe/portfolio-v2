@@ -99,11 +99,7 @@ export const MainSection: FC = () => {
         alt="https://cdnb.artstation.com/p/assets/images/images/032/655/025/medium/olya-kolosha-3.jpg?1607070929"
       />
       <div className="w-full h-screen absolute top-0 left-0 bg-background/40">
-        <div
-          data-aos="fade"
-          data-aos-duration="700"
-          className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center"
-        >
+        <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center">
           <Title />
           <SocialShortcuts />
         </div>

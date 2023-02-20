@@ -6,18 +6,10 @@ export const ContactSection: FC = () => {
       id="contact"
       className="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
     >
-      <h1
-        data-aos="fade"
-        data-aos-duration="700"
-        className="mb-12 text-4xl font-bold text-center text-primary"
-      >
+      <h1 className="mb-12 text-4xl font-bold text-center text-primary">
         Contact
       </h1>
-      <p
-        data-aos="fade"
-        data-aos-duration="700"
-        className="mt-2 mb-4 text-base font-normal text-secondary/80"
-      >
+      <p className="mt-2 mb-4 text-base font-normal text-secondary/80">
         You can contact me by filling out the following form, through my{" "}
         <a
           href="#main"
@@ -37,8 +29,6 @@ export const ContactSection: FC = () => {
         , and I will answer you as soon as possible.
       </p>
       <form
-        data-aos="fade"
-        data-aos-duration="700"
         action={import.meta.env.VITE_FORM_URL}
         method="POST"
         encType="multipart/form-data"

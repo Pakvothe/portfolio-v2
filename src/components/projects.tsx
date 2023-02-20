@@ -5,11 +5,7 @@ import { Project, projectsData } from "@/utils";
 
 const HighlightedProject: FC = () => (
   <div className="flex flex-wrap md:flex-nowrap">
-    <div
-      data-aos="fade"
-      data-aos-duration="700"
-      className="w-screen md:w-[50%] flex flex-row"
-    >
+    <div className="w-screen md:w-[50%] flex flex-row">
       <img
         src={BELO1}
         alt="/"
@@ -21,11 +17,7 @@ const HighlightedProject: FC = () => (
         className="rounded-r-lg object-contain w-[50%]"
       />
     </div>
-    <div
-      data-aos="fade"
-      data-aos-duration="700"
-      className="mt-8 md:mt-0 md:ml-8 md:w-[50%]"
-    >
+    <div className="mt-8 md:mt-0 md:ml-8 md:w-[50%]">
       <div className="mb-2 flex items-center flex flex-wrap">
         <p className="mr-2 text-xl text-primary">const</p>
         <h2 className="text-center md:text-left text-2xl font-bold text-secondary">
@@ -64,7 +56,7 @@ const HighlightedProject: FC = () => (
 
 const ProjectItem: FC<Project> = ({ name, description, link }) => {
   return (
-    <div data-aos="fade" data-aos-duration="700" className="my-8  md:ml-4 ">
+    <div className="my-8  md:ml-4 ">
       <div className="w-full mb-2 flex items-center flex flex-wrap">
         <p className="mr-2 text-primary text-sm">const</p>
         <h2 className="text-center md:text-left text-md font-bold text-secondary">
@@ -98,19 +90,11 @@ export const ProjectsSection: FC = () => {
       id="projects"
       className="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
     >
-      <h1
-        data-aos="fade"
-        data-aos-duration="700"
-        className="mb-12 text-4xl font-bold text-center text-primary"
-      >
+      <h1 className="mb-12 text-4xl font-bold text-center text-primary">
         Projects
       </h1>
       <HighlightedProject />
-      <div
-        data-aos="fade"
-        data-aos-duration="700"
-        className="mt-6 flex items-center"
-      >
+      <div className="mt-6 flex items-center">
         <p
           onClick={toggleProjects}
           className="text-lg ml-auto font-semibold text-primary hover:text-accent hover:underline cursor-pointer"

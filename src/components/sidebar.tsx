@@ -62,8 +62,6 @@ export const Sidebar: FC = () => {
 
   const MobileNavigationMenu: FC = () => (
     <div
-      data-aos="fade"
-      data-aos-duration="700"
       onClick={toggleNav}
       className="md:hidden block fixed pr-7 w-[100%] h-screen bg-primary/80 flex flex-col justify-center items-center z-20"
     >
@@ -86,8 +84,6 @@ export const Sidebar: FC = () => {
       <div className="flex flex-col">
         {navigationMap.map((navigation) => (
           <a
-            data-aos="fade"
-            data-aos-duration="700"
             aria-label={`shortcut-${navigation.name}`}
             key={navigation.name}
             href={navigation.href}
