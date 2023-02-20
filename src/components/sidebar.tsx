@@ -62,6 +62,8 @@ export const Sidebar: FC = () => {
 
   const MobileNavigationMenu: FC = () => (
     <div
+      data-aos="fade"
+      data-aos-duration="700"
       onClick={toggleNav}
       className="md:hidden block fixed pr-7 w-[100%] h-screen bg-primary/80 flex flex-col justify-center items-center z-20"
     >
@@ -70,7 +72,7 @@ export const Sidebar: FC = () => {
           aria-label={`shortcut-${navigation.name}`}
           key={navigation.name}
           href={navigation.href}
-          className="flex items-center w-[75%] my-2 p-4 bg-background rounded-lg shadow-md shadow-primary/50 cursor-pointer hover:scale-105 ease-in duration-100"
+          className="flex items-center justify-center w-[75%] my-2 p-4 bg-background rounded-lg shadow-md shadow-primary/50 cursor-pointer hover:scale-105 ease-in-out duration-100"
         >
           {navigation.icon}
           <span className="ml-2 text-secondary">{navigation.name}</span>
@@ -84,10 +86,12 @@ export const Sidebar: FC = () => {
       <div className="flex flex-col">
         {navigationMap.map((navigation) => (
           <a
+            data-aos="fade"
+            data-aos-duration="700"
             aria-label={`shortcut-${navigation.name}`}
             key={navigation.name}
             href={navigation.href}
-            className="flex items-center my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in duration-100"
+            className="flex items-center my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in-out duration-100"
           >
             {navigation.icon}
           </a>

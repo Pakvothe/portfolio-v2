@@ -1,6 +1,7 @@
 import {
   AboutSection,
   ContactSection,
+  Footer,
   Layout,
   MainSection,
   ProjectsSection,
@@ -17,6 +18,7 @@ const PortfolioMainPage = () => {
       <WorkSection />
       <ProjectsSection />
       <ContactSection />
+      <Footer />
     </Layout>
   );
 };

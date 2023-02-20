@@ -5,7 +5,11 @@ import { Project, projectsData } from "@/utils";
 
 const HighlightedProject: FC = () => (
   <div className="flex flex-wrap md:flex-nowrap">
-    <div className="w-screen md:w-[50%] flex flex-row">
+    <div
+      data-aos="fade"
+      data-aos-duration="700"
+      className="w-screen md:w-[50%] flex flex-row"
+    >
       <img
         src={BELO1}
         alt="/"
@@ -17,7 +21,11 @@ const HighlightedProject: FC = () => (
         className="rounded-r-lg object-contain w-[50%]"
       />
     </div>
-    <div className="mt-8 md:mt-0 md:ml-8 md:w-[50%]">
+    <div
+      data-aos="fade"
+      data-aos-duration="700"
+      className="mt-8 md:mt-0 md:ml-8 md:w-[50%]"
+    >
       <div className="mb-2 flex items-center flex flex-wrap">
         <p className="mr-2 text-xl text-primary">const</p>
         <h2 className="text-center md:text-left text-2xl font-bold text-secondary">
@@ -28,7 +36,7 @@ const HighlightedProject: FC = () => (
           href="https://belo.app"
           target="_blank"
           rel="noreferrer"
-          className="md:ml-2 text-xl font-bold text-secondary hover:text-accent hover:underline cursor-pointer"
+          className="truncate text-ellipsis md:ml-2 text-xl font-bold text-secondary hover:transition-all hover:text-accent hover:underline cursor-pointer"
         >
           https://belo.app/
         </a>
@@ -56,8 +64,8 @@ const HighlightedProject: FC = () => (
 
 const ProjectItem: FC<Project> = ({ name, description, link }) => {
   return (
-    <div className="my-8  md:ml-4 ">
-      <div className="mb-2 flex items-center flex flex-wrap">
+    <div data-aos="fade" data-aos-duration="700" className="my-8  md:ml-4 ">
+      <div className="w-full mb-2 flex items-center flex flex-wrap">
         <p className="mr-2 text-primary text-sm">const</p>
         <h2 className="text-center md:text-left text-md font-bold text-secondary">
           {name}
@@ -67,7 +75,7 @@ const ProjectItem: FC<Project> = ({ name, description, link }) => {
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="md:ml-2 text-sm font-bold text-secondary hover:text-accent hover:underline cursor-pointer"
+          className="truncate text-ellipsis md:ml-2 text-sm font-bold text-secondary hover:transition-all hover:text-accent hover:underline cursor-pointer"
         >
           {link}
         </a>
@@ -90,11 +98,19 @@ export const ProjectsSection: FC = () => {
       id="projects"
       className="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
     >
-      <h1 className="mb-12 text-4xl font-bold text-center text-primary">
+      <h1
+        data-aos="fade"
+        data-aos-duration="700"
+        className="mb-12 text-4xl font-bold text-center text-primary"
+      >
         Projects
       </h1>
       <HighlightedProject />
-      <div className="mt-6 flex items-center">
+      <div
+        data-aos="fade"
+        data-aos-duration="700"
+        className="mt-6 flex items-center"
+      >
         <p
           onClick={toggleProjects}
           className="text-lg ml-auto font-semibold text-primary hover:text-accent hover:underline cursor-pointer"
@@ -105,6 +121,7 @@ export const ProjectsSection: FC = () => {
       {showProject
         ? projectsData.map((project) => (
             <ProjectItem
+              key={project.name}
               name={project.name}
               description={project.description}
               link={project.link}

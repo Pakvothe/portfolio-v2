@@ -94,12 +94,16 @@ export const MainSection: FC = () => {
   return (
     <div id="main">
       <img
-        className="w-full h-screen object-center object-cover object-left scale-x-[- 1]"
+        className="w-full h-screen object-center object-cover scale-x-[- 1]"
         src={MAIN_IMAGE}
         alt="https://cdnb.artstation.com/p/assets/images/images/032/655/025/medium/olya-kolosha-3.jpg?1607070929"
       />
       <div className="w-full h-screen absolute top-0 left-0 bg-background/40">
-        <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center">
+        <div
+          data-aos="fade"
+          data-aos-duration="700"
+          className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center"
+        >
           <Title />
           <SocialShortcuts />
         </div>
