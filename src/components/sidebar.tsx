@@ -67,6 +67,7 @@ export const Sidebar: FC = () => {
     >
       {navigationMap.map((navigation) => (
         <a
+          aria-label={`shortcut-${navigation.name}`}
           key={navigation.name}
           href={navigation.href}
           className="flex items-center w-[75%] my-2 p-4 bg-background rounded-lg shadow-md shadow-primary/50 cursor-pointer hover:scale-105 ease-in duration-100"
@@ -83,6 +84,7 @@ export const Sidebar: FC = () => {
       <div className="flex flex-col">
         {navigationMap.map((navigation) => (
           <a
+            aria-label={`shortcut-${navigation.name}`}
             key={navigation.name}
             href={navigation.href}
             className="flex items-center my-3 bg-background shadow-md shadow-primary/50 p-3 rounded-full ml-4 cursor-pointer hover:scale-105 ease-in duration-100"
