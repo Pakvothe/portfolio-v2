@@ -9,7 +9,7 @@ export const ContactSection: FC = () => {
       <h1 className="mb-12 text-4xl font-bold text-center text-primary">
         Contact
       </h1>
-      <p className="mt-2 mb-4 text-base font-normal text-secondary/70">
+      <p className="mt-2 mb-4 text-base font-normal text-secondary/80">
         You can contact me by filling out the following form, through my{" "}
         <a
           href="#main"
@@ -35,20 +35,28 @@ export const ContactSection: FC = () => {
       >
         <div className="grid md:grid-cols-2 gap-4 w-full py-2">
           <div className="flex flex-col">
-            <label className="text-sm mb-2 font-semibold text-primary">
+            <label
+              id="name-label"
+              className="text-sm mb-2 font-semibold text-primary"
+            >
               Name
             </label>
             <input
+              aria-labelledby="name-label"
               className="border-2 rounded-lg p-3 flex border-primary focus:border-accent focus:outline-none"
               type="text"
               name="name"
             />
           </div>
           <div className="flex flex-col">
-            <label className="text-sm mb-2 font-semibold text-primary">
+            <label
+              id="email-label"
+              className="text-sm mb-2 font-semibold text-primary"
+            >
               Email
             </label>
             <input
+              aria-labelledby="email-label"
               className="border-2 rounded-lg p-3 flex border-primary focus:border-accent focus:outline-none"
               type="email"
               name="email"
@@ -56,20 +64,28 @@ export const ContactSection: FC = () => {
           </div>
         </div>
         <div className="flex flex-col py-2">
-          <label className="text-sm mb-2 font-semibold text-primary">
+          <label
+            id="subject-label"
+            className="text-sm mb-2 font-semibold text-primary"
+          >
             Subject
           </label>
           <input
+            aria-labelledby="subject-label"
             className="border-2 rounded-lg p-3 flex border-primary focus:border-accent focus:outline-none"
             type="text"
             name="subject"
           />
         </div>
         <div className="flex flex-col py-2">
-          <label className="text-sm mb-2 font-semibold text-primary">
+          <label
+            id="message-label"
+            className="text-sm mb-2 font-semibold text-primary"
+          >
             Message
           </label>
           <textarea
+            aria-labelledby="message-label"
             className="w-[100%] border-2 rounded-lg p-3 flex border-primary focus:border-accent focus:outline-none"
             name="message"
             rows={10}

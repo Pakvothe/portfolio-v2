@@ -35,7 +35,12 @@ const Title: FC = () => (
 
 const SocialShortcuts: FC = () => (
   <div className="flex justify-between max-w-[250px] w-full mt-2">
-    <a href="https://github.com/Pakvothe" target="_blank" rel="noreferrer">
+    <a
+      aria-label="github"
+      href="https://github.com/Pakvothe"
+      target="_blank"
+      rel="noreferrer"
+    >
       <GithubIcon
         color={colorMap.secondary}
         weight={18}
@@ -44,6 +49,7 @@ const SocialShortcuts: FC = () => (
       />
     </a>
     <a
+      aria-label="linkedin"
       href="https://www.linkedin.com/in/franco-david-ortiz/"
       target="_blank"
       rel="noreferrer"
@@ -55,7 +61,12 @@ const SocialShortcuts: FC = () => (
         className="cursor-pointer hover:scale-110 ease-in duration-100"
       />
     </a>
-    <a href="https://twitter.com/fortiz_dev" target="_blank" rel="noreferrer">
+    <a
+      aria-label="twitter"
+      href="https://twitter.com/fortiz_dev"
+      target="_blank"
+      rel="noreferrer"
+    >
       <TwitterIcon
         color={colorMap.secondary}
         weight={18}
@@ -64,6 +75,7 @@ const SocialShortcuts: FC = () => (
       />
     </a>
     <a
+      aria-label="email"
       href="mailto:fr.dv.ortiz@gmail.com?Subject=Job%20Offer"
       target="_blank"
       rel="noreferrer"

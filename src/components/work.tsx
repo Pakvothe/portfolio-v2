@@ -17,11 +17,11 @@ const Work: FC<Works> = ({ name, year, duration, description, link }) => {
           >
             {name}
           </a>
-          <span className="font-normal leading-none text-secondary/50">
+          <span className="font-normal leading-none text-secondary/75">
             {duration}
           </span>
         </p>
-        <p className="my-2 text-base font-normal text-secondary/70">
+        <p className="my-2 text-base font-normal text-secondary/80">
           {description}
         </p>
       </li>

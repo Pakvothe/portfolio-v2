@@ -33,18 +33,18 @@ const HighlightedProject: FC = () => (
           https://belo.app/
         </a>
       </div>
-      <p className="text-base font-normal text-secondary/70">
+      <p className="text-base font-normal text-secondary/80">
         Belo is a project that I am currently working on. It is a crypto wallet
         that aims to facilitate people's finances. As frontend leadear of the
         application I am involved from the beginning in the development of it.
       </p>
-      <p className="mt-2 text-base font-normal text-secondary/70">
+      <p className="mt-2 text-base font-normal text-secondary/80">
         The application is made in React Native, it uses mobx for state
         management, axios for data fetch and jest for testing. It is currently a
         productive application with more than 700k users and is available for
         Android and iOS.
       </p>
-      <p className="mt-2 text-base font-normal text-secondary/70">
+      <p className="mt-2 text-base font-normal text-secondary/80">
         With this development I learned a lot about optimizing code and taking
         advantage of the resources of the devices. I also learned how to lead a
         team and take an application to production in the PlayStore and AppStore
@@ -73,7 +73,7 @@ const ProjectItem: FC<Project> = ({ name, description, link }) => {
         </a>
       </div>
       {description ? (
-        <p className="text-xs font-normal text-secondary/70">{description}</p>
+        <p className="text-xs font-normal text-secondary/80">{description}</p>
       ) : null}
     </div>
   );
