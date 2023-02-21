@@ -8,33 +8,37 @@ export const projectsData: Project[] = [
   {
     name: "logiaSistemas",
     description:
-      "Landing Page for the security company Logia Sistemas. It was made from 0 from logic to style. Redux was used for state management, Styled Components for styles and EmailJs for messaging. The deployment was also carried out from scratch, including the acquisition of the domain .com.ar",
+      "I developed a custom Landing Page for Logia Sistemas, a security company. From the ground up, I designed and implemented the project, starting with the underlying logic and finishing with the final styling. To ensure optimal performance and scalability, I utilized Redux for state management and Styled Components for styling. Additionally, I incorporated EmailJS to enable seamless messaging on the page. I was responsible for deploying the project, which included acquiring the .com.ar domain.",
     link: "https://www.logiasistemas.com.ar/",
   },
   {
     name: "aconpyLanding",
-    description: `Landing Page of the Aconpy company. This project was a complete restyling of the outdated website of the company I work for. It was done completely with vanilla HTML, CSS and JavaScript in just 2 days. The project was carried out by myself in its entirety.`,
+    description: `The Landing Page for the Aconpy company was a complete restyling of the company's outdated website. The project was completed in just 2 days, utilizing only vanilla HTML, CSS, and JavaScript. I was solely responsible for the project from start to finish. During the project, I gained valuable experience in working independently and completing a project within a tight timeframe. The resulting landing page was both visually appealing and functional, bringing the company's online presence up to modern standards.`,
     link: "https://www.aconpy.com/",
   },
   {
     name: "quizzMeApp",
-    description: `Final project of the "soyHenry" bootcamp for which I implemented self-taught technologies (React Native, GraphQL, MongoDB). In the project I am almost exclusively dedicated to the front with React Native and the UI with Styled Components. The project consists of a mobile quiz application, it allows you to create an account, upload quizzes, validate an account and much more. The project is complemented by "QuizMeWeb" which is a web dashboard for the application administrator,the same developed in TypeScript and NextJS. The application was uploaded to the "Huawei App Gallery".`,
+    description: `The final project of the "soyHenry" bootcamp was a significant accomplishment for me, as I successfully implemented self-taught technologies such as React Native, GraphQL, and MongoDB. In the project, my main focus was on the frontend development using React Native and Styled Components for the UI. The project is a mobile quiz application that provides various functionalities such as creating an account, uploading quizzes, validating an account, and much more.
+
+To complement the mobile application, I also developed "QuizMeWeb," a web dashboard for application administrators, using TypeScript and NextJS. This comprehensive solution allowed the client to manage quizzes and monitor user data on both mobile and web platforms.
+
+I am proud to share that the application was successfully uploaded to the "Huawei App Gallery," which showcases my skills in mobile application deployment.`,
     link: "https://appgallery.huawei.com/#/app/C103845919",
   },
   {
     name: "gamingHub",
-    description: `Ecommerce project of the bootcamp "soyHenry". It consists of a fully functional online video game store made from scratch, it allows you to search for products, add them to the cart, buy and receive it. In this project, all the technologies learned in the bootcamp and some self- taught were used. We worked with a group of 5 programmers using SCRUM methodology.`,
+    description: `The Ecommerce project was developed as part of the "soyHenry" bootcamp, and it involved creating a fully functional online video game store from scratch. The project allowed users to search for products, add them to their cart, make purchases, and receive their orders. In order to create this project, we utilized all of the technologies that we learned in the bootcamp as well as some self-taught ones. The project was developed by a team of five programmers who worked collaboratively using the SCRUM methodology.`,
     link: "https://github.com/Pakvothe/GamingHub",
   },
 
   {
     name: "tetrisGame",
-    description: `This is a "Tetris" game built entirely in Javascript with React.js. Styled Components were used to style it. The game is fully functional, it is controlled with the keyboard arrows and it allows you to go up in score and difficulty. It requires entering a user to play and saves the 3 highest scores in a database in the cloud, in the same way it has a visit counter hosted in the cloud.`,
+    description: `The "Tetris" game was created using React.js and styled with Styled Components, all in Javascript. The game is fully functional and can be controlled using the keyboard arrows. It allows the player to progress in score and difficulty. To play the game, users must create an account, and the game saves the top three high scores to a cloud database. Additionally, a visit counter is hosted in the cloud to track traffic to the site.`,
     link: "https://pakvothe.github.io/ReactTetris/",
   },
   {
     name: "OUTDATED_portfolioV1",
-    description: `My first portfolio page (outdated).`,
+    description: `This is my initial portfolio page, but it is outdated and does not reflect my current skills and experience.`,
     link: "https://pakvothe.github.io/portfolio/",
   },
   {

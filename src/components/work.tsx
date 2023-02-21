@@ -1,7 +1,16 @@
 import { Works, workData } from "@/utils";
 import { FC } from "react";
 
-const Work: FC<Works> = ({ name, year, duration, description, link }) => {
+const Work: FC<Works> = ({
+  name,
+  year,
+  duration,
+  description,
+  description2,
+  description3,
+
+  link,
+}) => {
   return (
     <ol className="flex flex-col md:flex-row">
       <li className="mb-8">
@@ -24,6 +33,16 @@ const Work: FC<Works> = ({ name, year, duration, description, link }) => {
         <p className="my-2 text-base font-normal text-secondary/80">
           {description}
         </p>
+        {description2 ? (
+          <p className="my-2 text-base font-normal text-secondary/80">
+            {description2}
+          </p>
+        ) : null}
+        {description3 ? (
+          <p className="my-2 text-base font-normal text-secondary/80">
+            {description3}
+          </p>
+        ) : null}
       </li>
     </ol>
   );
@@ -44,6 +63,8 @@ export const WorkSection: FC = () => {
           year={work.year}
           duration={work.duration}
           description={work.description}
+          description2={work.description2}
+          description3={work.description3}
           link={work.link}
         />
       ))}

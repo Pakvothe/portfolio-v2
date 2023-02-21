@@ -1,6 +1,8 @@
 export const aboutMe1: string =
-  "I am a senior frontend developer. I specialize in mobile app development with React Native and web with React.";
+  "As a senior frontend developer, I have extensive experience in both mobile app development using React Native and web development with React. Currently, I am the frontend leader at Belo, where I am responsible for developing the company's flagship application, a crypto wallet that has a user base of over 700k users.";
 export const aboutMe2: string =
-  "I currently work at belo as a frontend leader. My job is to develop the belo application which is a crypto wallet with more than 700k users.";
+  "I thrive on challenges and enjoy leading teams, sharing my knowledge, and always giving my best effort. When I'm not in front of the screen, you'll likely find me reading or working on mechanics as a hobby, or spending quality time with my family.";
 export const aboutMe3: string =
-  "I like challenges, leading teams, sharing my knowledge and giving the best of me. When I'm not in front of the screen, I usually reading something, doing mechanics as a hobby and spending time with my family.";
+  "Throughout my career, I have always pushed myself to take on new challenges and broaden my skill set. I'm passionate about staying up-to-date with the latest technologies and industry trends to provide the best possible user experience to my clients.";
+export const aboutMe4: string =
+  "I'm excited about the opportunities that lie ahead, and I'm confident that my expertise and drive will make a valuable addition to any team.";

@@ -1,4 +1,4 @@
-import { aboutMe1, aboutMe2, aboutMe3 } from "@/utils";
+import { aboutMe1, aboutMe2, aboutMe3, aboutMe4 } from "@/utils";
 import { FC } from "react";
 
 export const AboutSection: FC = () => {
@@ -14,6 +14,9 @@ export const AboutSection: FC = () => {
         </p>
         <p className="mt-2 text-base font-normal text-secondary/80">
           {aboutMe3}
+        </p>
+        <p className="mt-2 text-base font-normal text-secondary/80">
+          {aboutMe4}
         </p>
       </div>
     </div>
