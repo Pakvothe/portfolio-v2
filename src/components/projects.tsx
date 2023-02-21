@@ -34,15 +34,17 @@ const HighlightedProject: FC = () => (
         </a>
       </div>
       <p className="text-base font-normal text-secondary/80">
-        I have been leading the frontend development of Belo, a crypto wallet
-        project designed to make financial management more accessible to people.
+        I have been leading the frontend and mobile development efforts at Belo,
+        a successful crypto wallet project aimed at making financial management
+        more accessible to the masses.
       </p>
       <p className="mt-2 text-base font-normal text-secondary/80">
-        From the outset, my responsibilities have included developing the
-        application in React Native, implementing MobX for state management,
-        integrating Axios for data fetching, and using Jest for testing. With a
-        user base of over 700k and availability on both Android and iOS, Belo
-        has become a highly successful and widely used financial tool.
+        As the lead developer, my primary responsibilities have included
+        developing the application using React Native, implementing MobX for
+        state management, integrating Axios for data fetching, and leveraging
+        Jest for testing. With a user base of over 700k and availability on both
+        Android and iOS platforms, Belo has become a widely-used and highly
+        successful financial tool.
       </p>
       <p className="mt-2 text-base font-normal text-secondary/80">
         Throughout my work on Belo, I have gained valuable experience in

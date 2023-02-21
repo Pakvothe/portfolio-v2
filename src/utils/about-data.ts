@@ -1,8 +1,7 @@
 export const aboutMe1: string =
-  "As a senior frontend developer, I have extensive experience in both mobile app development using React Native and web development with React. Currently, I am the frontend leader at Belo, where I am responsible for developing the company's flagship application, a crypto wallet that has a user base of over 700k users.";
+  "As the Mobile Engineering Lead at Belo, a Crypto/Fiat digital wallet in Argentina, I am responsible for leading the frontend and mobile areas. In just five months, my team and I successfully migrated the entire app, which boasts over 700k registered users, from Flutter to React Native. This was a significant achievement as the Flutter app was an MVP.";
 export const aboutMe2: string =
-  "I thrive on challenges and enjoy leading teams, sharing my knowledge, and always giving my best effort. When I'm not in front of the screen, you'll likely find me reading or working on mechanics as a hobby, or spending quality time with my family.";
-export const aboutMe3: string =
-  "Throughout my career, I have always pushed myself to take on new challenges and broaden my skill set. I'm passionate about staying up-to-date with the latest technologies and industry trends to provide the best possible user experience to my clients.";
+  "While I am not actively seeking new job opportunities, I am always interested in hearing about exciting new projects and opportunities, particularly in the mobile area or the crypto industry.";
+export const aboutMe3: string = "If you would like to connect, ";
 export const aboutMe4: string =
-  "I'm excited about the opportunities that lie ahead, and I'm confident that my expertise and drive will make a valuable addition to any team.";
+  "please feel free to reach out to me using the contact information at the end of this page.";

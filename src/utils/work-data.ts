@@ -13,9 +13,9 @@ export const workData: Works[] = [
     name: "Belo",
     year: 2022,
     duration: "Feb 2022 - Present",
-    description: `As a frontend lead at Belo, I was tasked with leading the migration of the company's native application from Flutter to React Native. With my expertise in mobile app development, I was able to successfully carry out the complete migration of the application within a tight deadline of 6 months, starting from scratch.`,
+    description: `As the Mobile Engineering Lead at Belo, I am responsible for overseeing the frontend and mobile areas of the company. I led the challenging task of migrating the company's native application from Flutter to React Native, successfully completing the project within a tight deadline of 5 months, starting from scratch`,
     description2:
-      "Throughout the migration process, I had the opportunity to lead and mentor a team of three frontend developers. As a result, I gained valuable experience in leadership and hiring, which helped me to effectively guide my team and produce high-quality results.",
+      "During the migration process, I led and mentored a team of three frontend developers, which provided me with valuable experience in leadership and hiring. This helped me guide my team effectively and produce high-quality results.",
     description3:
       "Currently, the Belo application has a user base of over 700k users, and I continue to work on enhancing its functionality and performance. My passion for taking on challenges, leading teams, and sharing my knowledge makes me a valuable asset to any project or organization.",
     link: "https://www.belo.app",

@@ -14,9 +14,12 @@ export const AboutSection: FC = () => {
         </p>
         <p className="mt-2 text-base font-normal text-secondary/80">
           {aboutMe3}
-        </p>
-        <p className="mt-2 text-base font-normal text-secondary/80">
-          {aboutMe4}
+          <a
+            href="#contact"
+            className="text-primary font-semibold underline cursor-pointer hover:text-accent hover:transition-all"
+          >
+            {aboutMe4}
+          </a>
         </p>
       </div>
     </div>
