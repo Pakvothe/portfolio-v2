@@ -5,7 +5,7 @@ import { Project, projectsData } from "@/utils";
 
 const HighlightedProject: FC = () => (
   <div className="flex flex-wrap md:flex-nowrap">
-    <div className="w-screen md:w-[50%] flex flex-row">
+    <div className="w-screen md:w-[50%] h-[100%] md:mt-2 flex flex-row">
       <img
         src={BELO1}
         alt="/"
