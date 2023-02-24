@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import * as path from "path";
 import { viteObfuscateFile } from "vite-plugin-obfuscator";
+import { ViteMinifyPlugin } from "vite-plugin-minify";
 
 const obfuscator_options = {
   compact: true,
@@ -33,7 +34,11 @@ const obfuscator_options = {
 };
 
 export default defineConfig({
-  plugins: [react(), viteObfuscateFile(obfuscator_options)],
+  plugins: [
+    react(),
+    ViteMinifyPlugin({}),
+    viteObfuscateFile(obfuscator_options),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src/"),

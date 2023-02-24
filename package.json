@@ -35,6 +35,7 @@
     "tailwindcss": "^3.2.7",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
+    "vite-plugin-minify": "^1.5.2",
     "vite-plugin-obfuscator": "^1.0.5"
   }
 }
