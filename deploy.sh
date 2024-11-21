@@ -15,6 +15,9 @@ echo > .nojekyll
 # if you are deploying to a custom domain
 echo 'franco-ortiz.com' > CNAME
 
+# copy headers file
+cp ../public/_headers ./_headers
+
 git init
 git checkout -B main
 git add -A
