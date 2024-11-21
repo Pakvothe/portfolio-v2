@@ -9,7 +9,7 @@
     "build": "bunx --bun tsc && vite build",
     "preview": "bunx --bun vite preview",
     "lint": "eslint --max-warnings=0 src",
-    "deploy": "bunx --buntsc && vite build && gh-pages -d dist"
+    "deploy": "bun run build && gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^5.0.0",
