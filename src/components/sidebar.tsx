@@ -63,7 +63,7 @@ export const Sidebar: FC = () => {
   const MobileNavigationMenu: FC = () => (
     <div
       onClick={toggleNav}
-      className="md:hidden block fixed pr-7 w-[100%] h-screen bg-primary/80 flex flex-col justify-center items-center z-20"
+      className="md:hidden fixed pr-7 w-[100%] h-screen bg-primary/80 flex flex-col justify-center items-center z-20"
     >
       {navigationMap.map((navigation) => (
         <a

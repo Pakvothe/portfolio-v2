@@ -92,18 +92,26 @@ const SocialShortcuts: FC = () => (
 
 export const MainSection: FC = () => {
   return (
-    <div id="main">
+    <section id="main" role="banner" aria-label="Introduction">
       <img
         className="w-full h-screen object-center object-cover scale-x-[- 1]"
         src={MAIN_IMAGE}
-        alt="https://cdnb.artstation.com/p/assets/images/images/032/655/025/medium/olya-kolosha-3.jpg?1607070929"
+        alt="Franco Ortiz - Frontend Developer"
+        loading="eager"
+        fetchPriority="high"
       />
-      <div className="w-full h-screen absolute top-0 left-0 bg-background/40">
-        <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center">
+      <div
+        className="w-full h-screen absolute top-0 left-0 bg-background/40"
+        role="presentation"
+      >
+        <div
+          className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center"
+          role="contentinfo"
+        >
           <Title />
           <SocialShortcuts />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

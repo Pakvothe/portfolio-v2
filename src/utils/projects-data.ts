@@ -6,39 +6,45 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    name: "baldrDashboard",
+    description:
+      "Baldr is a secondary project within Belo, designed as an internal compliance management dashboard. It enables compliance analysts to efficiently handle requests and manage supporting documentation for fund verification through an intuitive interface. I was involved in this project from the very beginning, taking part in key decisions such as technology stack selection (Vite, React, TypeScript, MobX) and product design. I also contributed to defining features and workflows to ensure the dashboard met the needs of the compliance team. In addition to shaping the product vision, I implemented the entire frontend, focusing on performance, usability, and scalability. Baldr reflects a blend of thoughtful design, robust technical implementation, and a clear focus on solving complex compliance challenges within Belo.",
+    link: "https://dashboard.baldr.app",
+  },
+  {
     name: "logiaSistemas",
     description:
-      "I developed a custom Landing Page for Logia Sistemas, a security company. From the ground up, I designed and implemented the project, starting with the underlying logic and finishing with the final styling. To ensure optimal performance and scalability, I utilized Redux for state management and Styled Components for styling. Additionally, I incorporated EmailJS to enable seamless messaging on the page. I was responsible for deploying the project, which included acquiring the .com.ar domain.",
+      "I designed and developed a custom Landing Page for Logia Sistemas, a security company. This end-to-end project involved crafting the logic, implementing Redux for state management, and using Styled Components for modern styling. EmailJS was integrated for seamless messaging functionality. I also handled deployment, including acquiring and configuring the .com.ar domain.",
     link: "https://www.logiasistemas.com.ar/",
   },
   {
     name: "aconpyLanding",
-    description: `The Landing Page for the Aconpy company was a complete restyling of the company's outdated website. The project was completed in just 2 days, utilizing only vanilla HTML, CSS, and JavaScript. I was solely responsible for the project from start to finish. During the project, I gained valuable experience in working independently and completing a project within a tight timeframe. The resulting landing page was both visually appealing and functional, bringing the company's online presence up to modern standards.`,
+    description:
+      "I revitalized Aconpy’s online presence by completely restyling their outdated website in just 2 days. Using only vanilla HTML, CSS, and JavaScript, I created a visually appealing and functional landing page. This project honed my ability to work independently and meet tight deadlines, delivering a modernized web experience.",
     link: "https://www.aconpy.com/",
   },
   {
     name: "quizzMeApp",
-    description: `The final project of the "soyHenry" bootcamp was a significant accomplishment for me, as I successfully implemented self-taught technologies such as React Native, GraphQL, and MongoDB. In the project, my main focus was on the frontend development using React Native and Styled Components for the UI. The project is a mobile quiz application that provides various functionalities such as creating an account, uploading quizzes, validating an account, and much more.
-
-To complement the mobile application, I also developed "QuizMeWeb," a web dashboard for application administrators, using TypeScript and NextJS. This comprehensive solution allowed the client to manage quizzes and monitor user data on both mobile and web platforms.
-
-I am proud to share that the application was successfully uploaded to the "Huawei App Gallery," which showcases my skills in mobile application deployment.`,
+    description:
+      "For my final bootcamp project, I developed 'QuizzMe,' a mobile quiz application using React Native, GraphQL, and MongoDB. The app includes features like user registration, quiz creation, and account validation. Additionally, I built a web dashboard for administrators using TypeScript and NextJS to manage quizzes and user data. Successfully deployed to the Huawei App Gallery, this project showcases my full-stack development and deployment skills.",
     link: "https://appgallery.huawei.com/#/app/C103845919",
   },
   {
     name: "gamingHub",
-    description: `The Ecommerce project was developed as part of the "soyHenry" bootcamp, and it involved creating a fully functional online video game store from scratch. The project allowed users to search for products, add them to their cart, make purchases, and receive their orders. In order to create this project, we utilized all of the technologies that we learned in the bootcamp as well as some self-taught ones. The project was developed by a team of five programmers who worked collaboratively using the SCRUM methodology.`,
+    description:
+      "As part of the 'SoyHenry' bootcamp, I collaborated with a team to create 'Gaming Hub,' an ecommerce platform for video games. Users can search, add items to a cart, and complete purchases. Built with a mix of bootcamp-taught and self-taught technologies, we employed SCRUM methodology to deliver a functional, scalable solution from scratch.",
     link: "https://github.com/Pakvothe/GamingHub",
   },
-
   {
     name: "tetrisGame",
-    description: `The "Tetris" game was created using React.js and styled with Styled Components, all in Javascript. The game is fully functional and can be controlled using the keyboard arrows. It allows the player to progress in score and difficulty. To play the game, users must create an account, and the game saves the top three high scores to a cloud database. Additionally, a visit counter is hosted in the cloud to track traffic to the site.`,
+    description:
+      "This fully functional Tetris game was developed using React.js and Styled Components. Players can create accounts, compete for high scores stored in a cloud database, and track site visits through a cloud-hosted counter. The game dynamically adjusts difficulty as players progress, offering an engaging experience.",
     link: "https://pakvothe.github.io/ReactTetris/",
   },
   {
-    name: "OUTDATED_portfolioV1",
-    description: `This is my initial portfolio page, but it is outdated and does not reflect my current skills and experience.`,
+    name: "portfolioV1(Deprecated)",
+    description:
+      "My first portfolio page, showcasing early projects and skills. While outdated, it reflects the foundation of my growth as a developer.",
     link: "https://pakvothe.github.io/portfolio/",
   },
   {

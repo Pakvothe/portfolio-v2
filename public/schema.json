@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Franco Ortiz",
+    "jobTitle": "Mobile Engineering Lead",
+    "description": "Frontend and mobile developer specializing in React Native and TypeScript",
+    "image": "https://franco-ortiz.com/profile-image.jpg",
+    "url": "https://franco-ortiz.com",
+    "sameAs": [
+      "https://github.com/Pakvothe",
+      "https://www.linkedin.com/in/franco-david-ortiz/",
+      "https://twitter.com/fortiz_dev"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Belo",
+      "url": "https://belo.app"
+    },
+    "knowsAbout": [
+      "React Native",
+      "TypeScript",
+      "Frontend Development",
+      "Mobile Development",
+      "React.js"
+    ]
+  }
+}

@@ -3,7 +3,6 @@ import { FC } from "react";
 
 const Work: FC<Works> = ({
   name,
-  year,
   duration,
   description,
   description2,
@@ -15,9 +14,6 @@ const Work: FC<Works> = ({
     <ol className="flex flex-col md:flex-row">
       <li className="mb-8">
         <p className="flex flex-wrap gap-4 items-center text-sm md-tex-sm">
-          <span className="bg-accent py-2 px-4 rounded-lg font-semibold text-secondary">
-            {year}
-          </span>
           <a
             href={link}
             target="_blank"
@@ -26,7 +22,7 @@ const Work: FC<Works> = ({
           >
             {name}
           </a>
-          <span className="font-normal leading-none text-secondary/75">
+          <span className="bg-accent py-2 px-4 rounded-lg font-semibold text-secondary">
             {duration}
           </span>
         </p>
@@ -49,8 +45,9 @@ const Work: FC<Works> = ({
 };
 export const WorkSection: FC = () => {
   return (
-    <div
+    <section
       id="works"
+      aria-label="Work Experience"
       className="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
     >
       <h1 className="mb-12 text-4xl font-bold text-center text-primary">
@@ -60,7 +57,6 @@ export const WorkSection: FC = () => {
         <Work
           key={work.name}
           name={work.name}
-          year={work.year}
           duration={work.duration}
           description={work.description}
           description2={work.description2}
@@ -68,6 +64,6 @@ export const WorkSection: FC = () => {
           link={work.link}
         />
       ))}
-    </div>
+    </section>
   );
 };

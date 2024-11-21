@@ -10,15 +10,16 @@ export const ContactSection: FC = () => {
         Contact
       </h1>
       <p className="mt-2 mb-4 text-base font-normal text-secondary/80">
-        If you would like to get in touch, feel free to fill out the contact
-        form on my website, reach out to me through my{" "}
+        I’d love to hear from you! Whether you have a project in mind, a job
+        opportunity, or just want to connect, feel free to reach out. You can
+        fill out the contact form on my website, connect with me through my{" "}
         <a
           href="#main"
           className="underline font-semibold text-primary hover:transition-all hover:text-accent"
         >
           social media
         </a>{" "}
-        accounts, or send me an email at{" "}
+        accounts, or send me an email directly at{" "}
         <a
           href="mailto:fr.dv.ortiz@gmail.com?Subject=Job%20Offer"
           target="_blank"
@@ -27,8 +28,9 @@ export const ContactSection: FC = () => {
         >
           fr.dv.ortiz@gmail.com
         </a>
-        . I will respond to you promptly.
+        . I’ll make sure to get back to you as soon as possible.
       </p>
+
       <form
         action={import.meta.env.VITE_FORM_URL}
         method="POST"

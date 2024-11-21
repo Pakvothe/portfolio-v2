@@ -3,7 +3,7 @@ let year = new Date().getFullYear();
 export const Footer = () => {
   return (
     <p className="pb-10 text-center text-md text-secondary/80">
-      📅 {year} - Designed and developed with ❤️ by{" "}
+      📅 {year} - Crafted with passion and precision by{" "}
       <a
         href="https://github.com/Pakvothe/"
         target="_blank"
@@ -12,7 +12,7 @@ export const Footer = () => {
       >
         Franco Ortiz
       </a>{" "}
-      🧙‍♂️
+      ✨
     </p>
   );
 };
