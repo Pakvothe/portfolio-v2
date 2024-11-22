@@ -12,7 +12,7 @@ export const ContactSection: FC = () => {
       <p className="mt-2 mb-4 text-base font-normal text-secondary/80">
         I’d love to hear from you! Whether you have a project in mind, a job
         opportunity, or just want to connect, feel free to reach out. You can
-        fill out the contact form on my website, connect with me through my{" "}
+        connect with me through my{" "}
         <a
           href="#main"
           className="underline font-semibold text-primary hover:transition-all hover:text-accent"
