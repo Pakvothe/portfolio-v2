@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+
+const navigation = [
+  { name: "Home", href: "#main", icon: "lucide:home" },
+  { name: "About", href: "#me", icon: "lucide:user" },
+  { name: "Experience", href: "#works", icon: "lucide:briefcase" },
+  { name: "Projects", href: "#projects", icon: "lucide:flask-conical" },
+  { name: "Contact", href: "#contact", icon: "lucide:mail" },
+];
+---
+
+<!-- Mobile bottom bar -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-md border-t border-white/5">
+  <div class="flex justify-around items-center py-2 px-2">
+    {navigation.map((nav) => (
+      <a
+        aria-label={nav.name}
+        href={nav.href}
+        class="flex flex-col items-center gap-0.5 text-secondary/50 hover:text-primary transition-colors duration-200"
+      >
+        <Icon name={nav.icon} class="w-4 h-4" />
+        <span class="text-[9px]">{nav.name}</span>
+      </a>
+    ))}
+  </div>
+</nav>
+
+<!-- Desktop sidebar -->
+<nav class="md:flex hidden fixed left-5 top-1/2 -translate-y-1/2 z-10 flex-col gap-1">
+  {navigation.map((nav) => (
+    <a
+      aria-label={`shortcut-${nav.name}`}
+      href={nav.href}
+      class="group relative flex items-center p-2 rounded-lg text-secondary/50 hover:text-primary transition-colors duration-200"
+    >
+      <Icon name={nav.icon} class="w-[18px] h-[18px]" />
+      <span class="absolute left-10 px-2 py-1 rounded text-xs font-medium bg-background/90 border border-primary/20 text-text opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+        {nav.name}
+      </span>
+    </a>
+  ))}
+</nav>

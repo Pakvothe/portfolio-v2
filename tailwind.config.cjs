@@ -1,23 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-
-delete colors["lightBlue"];
-delete colors["warmGray"];
-delete colors["trueGray"];
-delete colors["coolGray"];
-delete colors["blueGray"];
-
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{astro,html,js,ts}"],
   theme: {
-    colors: {
-      ...colors,
-      transparent: "transparent",
-      background: "#F7F7F7",
-      primary: "#256D85",
-      secondary: "#2B4865",
-      accent: "#8FE3CF",
-      text: "#002B5B",
+    extend: {
+      colors: {
+        background: "#18181b",
+        primary: "#f59e0b",
+        secondary: "#d4d4d8",
+        accent: "#fbbf24",
+        text: "#fafafa",
+      },
     },
   },
   plugins: [],

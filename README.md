@@ -1,87 +1,67 @@
 # Franco Ortiz - Portfolio
 
-![Portfolio Preview](src/assets/thumbnail.png)
+![Portfolio Preview](src/assets/thumbnail.webp)
 
-## 🚀 Overview
+## Overview
 
-Welcome to my portfolio repository! I'm Franco Ortiz, a Mobile Engineering Lead specializing in frontend and mobile development. This portfolio showcases my professional journey, projects, and technical expertise.
+Personal portfolio for Franco Ortiz — Technical Product Manager, Frontend & Mobile Lead, and CEO & Founder of [i1n](https://i1n.ai).
 
-## 🛠 Tech Stack
+**Live:** [franco-ortiz.com](https://franco-ortiz.com/)
 
-- **Frontend Framework:** React with TypeScript
-- **Build Tool:** Vite
+## Tech Stack
+
+- **Framework:** Astro (static, zero JS by default)
 - **Styling:** TailwindCSS
-- **Animations:** React Type Animation
-- **Performance Optimization:**
-  - Image optimization with vite-plugin-image-optimizer
-  - Code obfuscation for production
-  - Console removal in production
-  - Chunk optimization
-- **Development Tools:**
-  - ESLint with SonarJS rules
-  - Prettier
-  - TypeScript strict mode
+- **Icons:** astro-icon (Lucide + Simple Icons)
+- **Font:** Inter Variable (self-hosted via @fontsource)
+- **Images:** Astro Image optimization (astro:assets)
+- **Deploy:** GitHub Pages via GitHub Actions
+- **Package Manager:** Bun
 
-## ✨ Features
-
-- Responsive design for all devices
-- Smooth scroll navigation
-- Interactive project showcase
-- Contact form integration
-- Performance optimized assets
-- SEO friendly meta tags
-- Mobile-first approach
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-portfolio-v2/
-├── src/
-│ ├── assets/ # Images and icons
-│ ├── components/ # React components
-│ ├── hooks/ # Custom React hooks
-│ ├── pages/ # Page components
-│ ├── types/ # TypeScript definitions
-│ └── utils/ # Helper functions
-├── public/ # Static files
-└── ...config files
+src/
+├── layouts/Layout.astro       # Base layout, meta tags, SEO, global styles
+├── pages/
+│   ├── index.astro            # Main page
+│   └── 404.astro              # Redirect to /
+├── components/
+│   ├── Sidebar.astro          # Desktop sidebar + mobile bottom bar
+│   ├── MainSection.astro      # Hero with typing animation
+│   ├── AboutSection.astro     # About / bio
+│   ├── WorkSection.astro      # Work experience
+│   ├── ProjectsSection.astro  # Highlighted + expandable projects
+│   ├── ContactSection.astro   # Contact info
+│   └── Footer.astro           # Footer
+├── utils/                     # Static data (work, projects, about)
+└── assets/                    # Images (optimized at build time)
+
+public/
+├── CNAME                      # Custom domain
+├── llms.txt                   # AI crawler context
+├── robots.txt                 # Crawler rules
+├── sitemap.xml                # Sitemap
+├── site.webmanifest           # PWA manifest
+└── .well-known/security.txt   # Security contact
 ```
 
-## 🔗 Connect With Me
+## Development
+
+```bash
+bun install
+bun run dev       # Start dev server
+bun run build     # Build for production
+bun run preview   # Preview production build
+```
+
+## Connect
 
 - [LinkedIn](https://www.linkedin.com/in/franco-david-ortiz/)
 - [GitHub](https://github.com/Pakvothe)
-- [Twitter](https://twitter.com/fortiz_dev)
+- [X](https://x.com/fortiz_dev)
 - [Email](mailto:fr.dv.ortiz@gmail.com)
 
-## 🌐 Live Demo
+## License
 
-Visit my portfolio at [franco-ortiz.com](https://franco-ortiz.com/)
-
-## 📄 License
-
-MIT License
-
-Copyright (c) 2024 Franco Ortiz
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Built with 💻 by Franco Ortiz
+MIT License - Copyright (c) 2026 Franco Ortiz

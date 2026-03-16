@@ -1,0 +1,238 @@
+---
+import "@fontsource-variable/inter";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const siteUrl = "https://franco-ortiz.com";
+const ogImage = "https://github.com/Pakvothe/portfolio-v2/blob/main/src/assets/thumbnail.webp?raw=true";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#18181b" />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Franco Ortiz" />
+    <meta name="keywords" content="technical product manager, ceo, founder, i1n, localization, i18n, frontend developer, mobile developer, react native, typescript, software engineer, fintech, belo, crypto wallet, argentina" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Franco Ortiz" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@fortiz_dev" />
+    <meta name="twitter:creator" content="@fortiz_dev" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- PWA -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Franco Ortiz",
+          "url": "https://franco-ortiz.com",
+          "jobTitle": "CEO & Founder",
+          "description": "Strategic technical leader experienced in leading engineering teams, defining product roadmaps, and scaling fintech infrastructure.",
+          "email": "fr.dv.ortiz@gmail.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/franco-david-ortiz/",
+            "https://github.com/Pakvothe",
+            "https://x.com/fortiz_dev"
+          ],
+          "worksFor": [
+            {
+              "@type": "Organization",
+              "name": "i1n",
+              "url": "https://i1n.ai"
+            },
+            {
+              "@type": "Organization",
+              "name": "Belo",
+              "url": "https://belo.app"
+            }
+          ],
+          "knowsAbout": [
+            "Product Management",
+            "React Native",
+            "TypeScript",
+            "Frontend Development",
+            "Mobile Development",
+            "Localization Infrastructure",
+            "Fintech",
+            "Team Leadership"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Henry Bootcamp"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-background text-text">
+    <!-- Ambient floating glows -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+    <div class="ambient-glow ambient-glow-4"></div>
+    <div class="ambient-glow ambient-glow-5"></div>
+    <div class="ambient-glow ambient-glow-6"></div>
+
+    <div class="relative z-10">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    scroll-behavior: smooth;
+    font-family: "Inter Variable", sans-serif;
+  }
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transform: rotate(45deg) scale(2);
+    transform-origin: center center;
+  }
+
+  .ambient-glow {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+  }
+
+  .ambient-glow-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.10) 0%, transparent 70%);
+    animation: float-1 16s ease-in-out infinite;
+  }
+
+  .ambient-glow-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.08) 0%, transparent 70%);
+    animation: float-2 21s ease-in-out infinite;
+  }
+
+  .ambient-glow-3 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+    animation: float-3 14s ease-in-out infinite;
+  }
+
+  .ambient-glow-4 {
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.07) 0%, transparent 70%);
+    animation: float-4 18s ease-in-out infinite;
+  }
+
+  .ambient-glow-5 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.09) 0%, transparent 70%);
+    animation: float-5 23s ease-in-out infinite;
+  }
+
+  .ambient-glow-6 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.05) 0%, transparent 70%);
+    animation: float-6 12s ease-in-out infinite;
+  }
+
+  @keyframes float-1 {
+    0%, 100% { top: 5%; left: 70%; }
+    25% { top: 25%; left: 10%; }
+    50% { top: 45%; left: 80%; }
+    75% { top: 15%; left: 40%; }
+  }
+
+  @keyframes float-2 {
+    0%, 100% { top: 55%; left: 5%; }
+    25% { top: 35%; left: 65%; }
+    50% { top: 15%; left: 25%; }
+    75% { top: 65%; left: 55%; }
+  }
+
+  @keyframes float-3 {
+    0%, 100% { top: 75%; left: 75%; }
+    25% { top: 45%; left: 85%; }
+    50% { top: 25%; left: 45%; }
+    75% { top: 55%; left: 15%; }
+  }
+
+  @keyframes float-4 {
+    0%, 100% { top: 30%; left: 90%; }
+    25% { top: 70%; left: 30%; }
+    50% { top: 10%; left: 60%; }
+    75% { top: 80%; left: 80%; }
+  }
+
+  @keyframes float-5 {
+    0%, 100% { top: 85%; left: 40%; }
+    25% { top: 10%; left: 75%; }
+    50% { top: 60%; left: 10%; }
+    75% { top: 35%; left: 90%; }
+  }
+
+  @keyframes float-6 {
+    0%, 100% { top: 20%; left: 20%; }
+    25% { top: 80%; left: 60%; }
+    50% { top: 50%; left: 90%; }
+    75% { top: 10%; left: 50%; }
+  }
+</style>

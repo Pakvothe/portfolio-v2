@@ -1,0 +1,91 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="main" role="banner" aria-label="Introduction" class="relative h-screen">
+  <div
+    class="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center px-4"
+    role="contentinfo"
+  >
+    <p class="text-xs sm:text-sm font-medium tracking-widest uppercase text-primary mb-4">Welcome</p>
+    <h1 class="text-4xl sm:text-7xl font-bold text-text text-center">
+      Franco Ortiz
+    </h1>
+    <p class="text-sm sm:text-xl text-secondary/70 mt-4 text-center px-4">
+      Product Technical Manager · Frontend & Mobile Lead · CEO & Founder
+    </p>
+    <div class="flex text-sm sm:text-lg mt-3 text-accent/70">
+      <span id="type-animation"></span>
+      <span class="type-cursor">|</span>
+    </div>
+
+    <!-- Social shortcuts -->
+    <div class="flex gap-6 mt-8">
+      <a aria-label="github" href="https://github.com/Pakvothe" target="_blank" rel="noreferrer" class="social-icon">
+        <Icon name="simple-icons:github" class="w-5 h-5 text-secondary hover:text-accent transition-colors duration-200" />
+      </a>
+      <a aria-label="linkedin" href="https://www.linkedin.com/in/franco-david-ortiz/" target="_blank" rel="noreferrer" class="social-icon">
+        <Icon name="simple-icons:linkedin" class="w-5 h-5 text-secondary hover:text-accent transition-colors duration-200" />
+      </a>
+      <a aria-label="x" href="https://x.com/fortiz_dev" target="_blank" rel="noreferrer" class="social-icon">
+        <Icon name="simple-icons:x" class="w-5 h-5 text-secondary hover:text-accent transition-colors duration-200" />
+      </a>
+      <a aria-label="email" href="mailto:fr.dv.ortiz@gmail.com?Subject=Job%20Offer" target="_blank" rel="noreferrer" class="social-icon">
+        <Icon name="lucide:mail" class="w-5 h-5 text-secondary hover:text-accent transition-colors duration-200" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .type-cursor {
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style>
+
+<script>
+  const phrases = [
+    "Building i1n.ai",
+    "Scaling fintech at Belo",
+    "Shipping products that matter",
+  ];
+
+  const el = document.getElementById("type-animation")!;
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = phrases[phraseIndex];
+
+    if (!isDeleting) {
+      el.textContent = current.slice(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === current.length) {
+        setTimeout(() => { isDeleting = true; type(); }, 2000);
+        return;
+      }
+      setTimeout(type, 50);
+    } else {
+      el.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(type, 300);
+        return;
+      }
+      setTimeout(type, 30);
+    }
+  }
+
+  type();
+</script>
