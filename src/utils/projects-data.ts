@@ -6,45 +6,62 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    name: "i1nLanding",
+    description:
+      "Marketing site for i1n. Built with Astro, featuring docs, pricing, and integration guides. Optimized for SEO and performance.",
+    link: "https://i1n.ai",
+  },
+  {
+    name: "i1nDashboard",
+    description:
+      "Web dashboard for managing i1n projects, API keys, and translation analytics. Built with Preact and TypeScript.",
+    link: "https://dashboard.i1n.ai",
+  },
+  {
+    name: "i1nCLI",
+    description:
+      "Command-line tool for managing translations directly from the terminal. Handles init, push, translate (182 languages via AI), pull, and type-safe code generation.",
+    link: "https://www.npmjs.com/package/i1n",
+  },
+  {
     name: "baldrDashboard",
     description:
-      "Baldr is a secondary project within Belo, designed as an internal compliance management dashboard. It enables compliance analysts to efficiently handle requests and manage supporting documentation for fund verification through an intuitive interface. I was involved in this project from the very beginning, taking part in key decisions such as technology stack selection (Vite, React, TypeScript, MobX) and product design. I also contributed to defining features and workflows to ensure the dashboard met the needs of the compliance team. In addition to shaping the product vision, I implemented the entire frontend, focusing on performance, usability, and scalability. Baldr reflects a blend of thoughtful design, robust technical implementation, and a clear focus on solving complex compliance challenges within Belo.",
+      "Internal compliance dashboard for Belo. Built from scratch with Vite, React, TypeScript, and MobX. Used by compliance analysts to manage fund verification requests and documentation.",
     link: "https://dashboard.baldr.app",
   },
   {
     name: "logiaSistemas",
     description:
-      "I designed and developed a custom Landing Page for Logia Sistemas, a security company. This end-to-end project involved crafting the logic, implementing Redux for state management, and using Styled Components for modern styling. EmailJS was integrated for seamless messaging functionality. I also handled deployment, including acquiring and configuring the .com.ar domain.",
+      "Landing page for a security company. Built end-to-end with React, Redux, and Styled Components. Includes contact form via EmailJS.",
     link: "https://www.logiasistemas.com.ar/",
   },
   {
     name: "aconpyLanding",
     description:
-      "I revitalized Aconpy’s online presence by completely restyling their outdated website in just 2 days. Using only vanilla HTML, CSS, and JavaScript, I created a visually appealing and functional landing page. This project honed my ability to work independently and meet tight deadlines, delivering a modernized web experience.",
+      "Full website restyle for Aconpy, built in 2 days with vanilla HTML, CSS, and JavaScript.",
     link: "https://www.aconpy.com/",
   },
   {
     name: "quizzMeApp",
     description:
-      "For my final bootcamp project, I developed 'QuizzMe,' a mobile quiz application using React Native, GraphQL, and MongoDB. The app includes features like user registration, quiz creation, and account validation. Additionally, I built a web dashboard for administrators using TypeScript and NextJS to manage quizzes and user data. Successfully deployed to the Huawei App Gallery, this project showcases my full-stack development and deployment skills.",
+      "Mobile quiz app built with React Native, GraphQL, and MongoDB. Includes a NextJS admin dashboard. Deployed to Huawei App Gallery.",
     link: "https://appgallery.huawei.com/#/app/C103845919",
   },
   {
     name: "gamingHub",
     description:
-      "As part of the 'SoyHenry' bootcamp, I collaborated with a team to create 'Gaming Hub,' an ecommerce platform for video games. Users can search, add items to a cart, and complete purchases. Built with a mix of bootcamp-taught and self-taught technologies, we employed SCRUM methodology to deliver a functional, scalable solution from scratch.",
+      "Video game ecommerce platform. Team project built with React, featuring search, cart, and checkout flows.",
     link: "https://github.com/Pakvothe/GamingHub",
   },
   {
     name: "tetrisGame",
     description:
-      "This fully functional Tetris game was developed using React.js and Styled Components. Players can create accounts, compete for high scores stored in a cloud database, and track site visits through a cloud-hosted counter. The game dynamically adjusts difficulty as players progress, offering an engaging experience.",
+      "Fully functional Tetris clone built with React.js. Features user accounts, cloud-synced high scores, and progressive difficulty.",
     link: "https://pakvothe.github.io/ReactTetris/",
   },
   {
     name: "portfolioV1(Deprecated)",
-    description:
-      "My first portfolio page, showcasing early projects and skills. While outdated, it reflects the foundation of my growth as a developer.",
+    description: "My first portfolio page. Outdated but nostalgic.",
     link: "https://pakvothe.github.io/portfolio/",
   },
   {

@@ -1,0 +1,44 @@
+---
+import { workData } from "../utils/work-data";
+---
+
+<section
+  id="works"
+  aria-label="Work Experience"
+  class="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
+>
+  <h1 class="text-3xl sm:text-4xl font-bold text-center text-primary">Experience</h1>
+  <p class="mb-12 text-center text-secondary/60 text-sm mt-2">Where I've worked</p>
+  {workData.map((work) => (
+    <ol class="flex flex-col md:flex-row">
+      <li class="mb-8">
+        <p class="flex flex-wrap gap-4 items-center text-sm md-tex-sm">
+          <a
+            href={work.link}
+            target="_blank"
+            class="text-lg font-semibold text-primary hover:transition-all hover:text-accent cursor-pointer"
+            rel="noreferrer"
+          >
+            {work.name}
+          </a>
+          <span class="bg-primary/20 py-2 px-4 rounded-lg font-semibold text-primary">
+            {work.duration}
+          </span>
+        </p>
+        <p class="my-2 text-base font-normal text-secondary/80">
+          {work.description}
+        </p>
+        {work.description2 && (
+          <p class="my-2 text-base font-normal text-secondary/80">
+            {work.description2}
+          </p>
+        )}
+        {work.description3 && (
+          <p class="my-2 text-base font-normal text-secondary/80">
+            {work.description3}
+          </p>
+        )}
+      </li>
+    </ol>
+  ))}
+</section>

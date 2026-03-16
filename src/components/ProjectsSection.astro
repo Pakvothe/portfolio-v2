@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets";
+import { projectsData } from "../utils/projects-data";
+import i1n1 from "../assets/i1n-1.webp";
+import belo1 from "../assets/belo-1.webp";
+import belo2 from "../assets/belo-2.webp";
+
+const i1nProject = {
+  name: "i1n",
+  description:
+    "Localization-as-code platform. Translation files live in your repo as the source of truth—versioned, diffable, and reviewable like any other code. The product includes a landing site, a web dashboard, and an npm package (CLI).",
+  description2:
+    "Features AI-powered translation across 182 languages, auto-generated TypeScript definitions, and native integration with AI coding agents (Cursor, Claude Code, Windsurf). Supports JSON, ARB, XML, .strings, and YAML.",
+  link: "https://i1n.ai",
+};
+
+const beloProject = {
+  name: "Belo",
+  description:
+    "Crypto/Fiat wallet with +3.5M users, built with React Native for Android and iOS. Led the full migration from Flutter to React Native in 5 months.",
+  description2:
+    "Managed the engineering team and the end-to-end process from development to production on both app stores. Stack: React Native, MobX, Axios, Jest.",
+  link: "https://belo.app",
+};
+---
+
+<div
+  id="projects"
+  class="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
+>
+  <h1 class="text-3xl sm:text-4xl font-bold text-center text-primary">Projects</h1>
+  <p class="mb-12 text-center text-secondary/60 text-sm mt-2">What I've built</p>
+
+  <!-- Highlighted project: i1n (text left, image right) -->
+  <div class="mb-16 flex flex-wrap md:flex-nowrap">
+    <div class="md:mr-8 md:w-[50%] order-2 md:order-1">
+      <h2 class="text-2xl font-bold text-text">{i1nProject.name}</h2>
+      <a
+        href={i1nProject.link}
+        target="_blank"
+        rel="noreferrer"
+        class="text-sm text-primary hover:text-accent hover:underline"
+      >
+        {i1nProject.link}
+      </a>
+      <p class="mt-4 text-base text-secondary/80">
+        {i1nProject.description}
+      </p>
+      <p class="mt-2 text-base text-secondary/80">
+        {i1nProject.description2}
+      </p>
+    </div>
+    <div class="w-screen md:w-[50%] h-[100%] md:mt-2 flex flex-row mb-8 md:mb-0 order-1 md:order-2">
+      <Image
+        src={i1n1}
+        alt="i1n - Localization Infrastructure Platform"
+        class="rounded-lg object-contain w-full"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <!-- Highlighted project: Belo -->
+  <div class="flex flex-wrap md:flex-nowrap">
+    <div class="w-screen md:w-[50%] h-[100%] md:mt-2 flex flex-row">
+      <Image
+        src={belo1}
+        alt="Belo App Screenshot 1 - Crypto Wallet Interface"
+        class="rounded-l-lg object-contain w-[50%]"
+        loading="lazy"
+      />
+      <Image
+        src={belo2}
+        alt="Belo App Screenshot 2 - Transaction Dashboard"
+        class="rounded-r-lg object-contain w-[50%]"
+        loading="lazy"
+      />
+    </div>
+    <div class="mt-8 md:mt-0 md:ml-8 md:w-[50%]">
+      <h2 class="text-2xl font-bold text-text">{beloProject.name}</h2>
+      <a
+        href={beloProject.link}
+        target="_blank"
+        rel="noreferrer"
+        class="text-sm text-primary hover:text-accent hover:underline"
+      >
+        {beloProject.link}
+      </a>
+      <p class="mt-4 text-base text-secondary/80">
+        {beloProject.description}
+      </p>
+      <p class="mt-2 text-base text-secondary/80">
+        {beloProject.description2}
+      </p>
+    </div>
+  </div>
+
+  <!-- Toggle button -->
+  <div class="mt-12 flex justify-center">
+    <button
+      id="toggle-projects"
+      class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/30 text-primary font-semibold hover:bg-primary/10 hover:border-primary/50 transition-all duration-200 cursor-pointer"
+    >
+      <span>View more projects</span>
+      <svg id="toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <!-- More projects (hidden by default) -->
+  <div id="more-projects" class="hidden">
+    {projectsData.map((project) => (
+      <div class="my-8 md:ml-4">
+        <h3 class="text-lg font-semibold text-text">{project.name}</h3>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noreferrer"
+          class="text-sm text-primary hover:text-accent hover:underline"
+        >
+          {project.link}
+        </a>
+        {project.description && (
+          <p class="mt-2 text-sm text-secondary/80">{project.description}</p>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById("toggle-projects")!;
+  const projects = document.getElementById("more-projects")!;
+  let visible = false;
+
+  const icon = document.getElementById("toggle-icon")!;
+  const label = toggle.querySelector("span")!;
+
+  toggle.addEventListener("click", () => {
+    visible = !visible;
+    projects.classList.toggle("hidden");
+    label.textContent = visible ? "Hide projects" : "View more projects";
+    icon.style.transform = visible ? "rotate(180deg)" : "rotate(0deg)";
+  });
+</script>
