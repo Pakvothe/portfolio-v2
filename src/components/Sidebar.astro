@@ -11,16 +11,16 @@ const navigation = [
 ---
 
 <!-- Mobile bottom bar -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-md border-t border-white/5">
+<nav aria-label="Mobile navigation" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-t border-white/5">
   <div class="flex justify-around items-center py-2 px-2">
     {navigation.map((nav) => (
       <a
         aria-label={nav.name}
         href={nav.href}
-        class="flex flex-col items-center gap-0.5 text-secondary/50 hover:text-primary transition-colors duration-200"
+        class="flex flex-col items-center gap-0.5 text-secondary/70 hover:text-primary transition-colors duration-200"
       >
         <Icon name={nav.icon} class="w-4 h-4" />
-        <span class="text-[9px]">{nav.name}</span>
+        <span class="text-[10px] font-medium">{nav.name}</span>
       </a>
     ))}
   </div>
