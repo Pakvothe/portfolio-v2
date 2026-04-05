@@ -30,12 +30,6 @@ export const projectsData: Project[] = [
     link: "https://dashboard.baldr.app",
   },
   {
-    name: "logiaSistemas",
-    description:
-      "Landing page for a security company. Built end-to-end with React, Redux, and Styled Components. Includes contact form via EmailJS.",
-    link: "https://www.logiasistemas.com.ar/",
-  },
-  {
     name: "aconpyLanding",
     description:
       "Full website restyle for Aconpy, built in 2 days with vanilla HTML, CSS, and JavaScript.",
@@ -46,23 +40,6 @@ export const projectsData: Project[] = [
     description:
       "Mobile quiz app built with React Native, GraphQL, and MongoDB. Includes a NextJS admin dashboard. Deployed to Huawei App Gallery.",
     link: "https://appgallery.huawei.com/#/app/C103845919",
-  },
-  {
-    name: "gamingHub",
-    description:
-      "Video game ecommerce platform. Team project built with React, featuring search, cart, and checkout flows.",
-    link: "https://github.com/Pakvothe/GamingHub",
-  },
-  {
-    name: "tetrisGame",
-    description:
-      "Fully functional Tetris clone built with React.js. Features user accounts, cloud-synced high scores, and progressive difficulty.",
-    link: "https://pakvothe.github.io/ReactTetris/",
-  },
-  {
-    name: "portfolioV1(Deprecated)",
-    description: "My first portfolio page. Outdated but nostalgic.",
-    link: "https://pakvothe.github.io/portfolio/",
   },
   {
     name: "moreProjects",
