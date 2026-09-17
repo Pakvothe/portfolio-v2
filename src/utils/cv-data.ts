@@ -40,10 +40,6 @@ const lead = {
   team: "Built and managed the frontend and mobile teams: hiring, 1:1s, performance reviews, mentoring.",
   architecture:
     "Owned mobile architecture and performance on iOS and Android for a regulated fintech operating in several countries.",
-  releases:
-    "Owned the full release pipeline with Expo and EAS: builds, provisioning and submissions to the App Store and Google Play.",
-  animations:
-    "Turned Figma designs into production components with smooth animations (Reanimated, Gesture Handler).",
   web: "Shipped the web side too: SEO, the BeloPay transaction web app and an internal compliance dashboard.",
 };
 
@@ -167,13 +163,13 @@ export const variants: Record<Variant, CvVariant> = {
         "Run product for the cross-border payments squad, still hands-on with architecture and data.",
         [ptm.integration, ptm.planning, ptm.i18n, ptm.metric96, ptm.takeRate, ptm.analytics, ptm.okr],
       ),
-      leadRole([lead.rewrite, lead.team, lead.architecture, lead.releases, lead.animations, lead.web]),
+      leadRole([lead.rewrite, lead.team, lead.architecture, lead.web]),
       i1n,
       navent,
       aconpy,
     ],
     skills: [
-      { label: "Engineering", items: ["React Native", "Expo", "EAS", "TypeScript", "React", "Reanimated", "Mobile Architecture", "App Store & Google Play releases", "Jest", "CI/CD", "AI agents (Claude Code)"] },
+      { label: "Engineering", items: ["React Native", "React", "TypeScript", "Node.js", "Mobile Architecture", "iOS & Android releases", "CI/CD", "AI agents (Claude Code)"] },
       { label: "Management", items: ["Engineering Management", "Hiring", "Performance Reviews", "Planning", "Technical Roadmaps"] },
       { label: "Product & data", items: ["Product Management", "OKRs", "Payments", "SQL", "BigQuery"] },
     ],
