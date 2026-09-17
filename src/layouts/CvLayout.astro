@@ -1,0 +1,116 @@
+---
+import "@fontsource-variable/inter";
+import { contact, education, languages, type CvVariant } from "../utils/cv-data";
+
+interface Props { cv: CvVariant; index: boolean }
+const { cv, index } = Astro.props;
+const title = `${contact.name} · ${cv.headline.split(" · ")[0]} · Resume`;
+const description = cv.summary;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={contact.name} />
+    <meta name="robots" content={index ? "index, follow" : "noindex, follow"} />
+    {index && <link rel="canonical" href="https://franco-ortiz.com/cv/" />}
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={`https://franco-ortiz.com/cv/${cv.slug === "hybrid" ? "" : cv.slug + "/"}`} />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: contact.name,
+      url: "https://franco-ortiz.com",
+      email: contact.email,
+      jobTitle: cv.headline.split(" · ")[0],
+      description: cv.summary,
+      address: { "@type": "PostalAddress", addressLocality: "Buenos Aires", addressCountry: "AR" },
+      worksFor: { "@type": "Organization", name: "belo", url: "https://belo.app" },
+      sameAs: [`https://${contact.linkedin}`, `https://${contact.github}`],
+      knowsAbout: cv.skills.flatMap((s) => s.items),
+      knowsLanguage: ["es", "en"],
+    })} />
+  </head>
+  <body>
+    <nav class="screen-only">
+      <a href="/">← franco-ortiz.com</a>
+      <a href={`/${cv.fileName}`} download>Download PDF</a>
+    </nav>
+    <main>
+      <header>
+        <h1>{contact.name}</h1>
+        <p class="headline">{cv.headline}</p>
+        <p class="contact">
+          <a href={`mailto:${contact.email}`}>{contact.email}</a> ·
+          <a href={`https://${contact.site}`}>{contact.site}</a> ·
+          <a href={`https://${contact.linkedin}`}>{contact.linkedin}</a> ·
+          <a href={`https://${contact.github}`}>{contact.github}</a> ·
+          <span>{contact.location}</span>
+        </p>
+      </header>
+
+      <section>
+        <h2>Summary</h2>
+        <p>{cv.summary}</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        {cv.roles.map((r) => (
+          <article>
+            <div class="role-head">
+              <h3>{r.title}, {r.company}</h3>
+              <span class="period">{r.period}</span>
+            </div>
+            {r.intro && <p class="intro">{r.intro}</p>}
+            <ul>{r.bullets.map((b) => <li>{b}</li>)}</ul>
+          </article>
+        ))}
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        {cv.skills.map((s) => (
+          <p class="skills"><strong>{s.label}:</strong> {s.items.join(", ")}</p>
+        ))}
+      </section>
+
+      <section>
+        <h2>Education & Languages</h2>
+        <p class="skills">{education.map((e) => <span><strong>{e.name}</strong>, {e.period}</span>)} · <strong>Languages:</strong> {languages}</p>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @page { size: A4; margin: 11mm 14mm; }
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; color: #111; font-family: "Inter Variable", Inter, Arial, sans-serif; font-size: 10pt; line-height: 1.34; }
+  main { max-width: 800px; margin: 0 auto; padding: 24px 20px 48px; }
+  header h1 { font-size: 22pt; margin: 0 0 2px; letter-spacing: -0.01em; }
+  .headline { margin: 0 0 4px; font-size: 11pt; font-weight: 600; color: #333; }
+  .contact { margin: 0; font-size: 9.2pt; color: #444; }
+  .contact a { color: #444; text-decoration: none; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: 0.08em; color: #555; border-bottom: 1px solid #ddd; padding-bottom: 2px; margin: 11px 0 5px; }
+  h3 { font-size: 10.8pt; margin: 0; font-weight: 600; }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 8px; }
+  .period { font-size: 9.2pt; color: #555; white-space: nowrap; }
+  .intro { margin: 2px 0 2px; color: #333; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin: 0 0 1.5px; }
+  p { margin: 2px 0; }
+  .skills { margin: 1px 0; }
+  article { break-inside: avoid; }
+  nav.screen-only { display: flex; justify-content: space-between; max-width: 800px; margin: 0 auto; padding: 14px 20px 0; font-size: 10pt; }
+  nav.screen-only a { color: #555; }
+  @media print { nav.screen-only { display: none; } main { padding: 0; max-width: none; } a { color: inherit; } }
+</style>

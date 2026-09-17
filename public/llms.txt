@@ -19,6 +19,10 @@ Franco Ortiz is a Technical Product Manager based in Buenos Aires, Argentina. He
 - Engineering: React Native, React, TypeScript, Mobile Architecture, Engineering Management, AI agents in the development workflow
 - Languages: Spanish (native), English (professional working proficiency)
 
+## Resume
+- HTML: https://franco-ortiz.com/cv/ (product focus: /cv/product/, engineering focus: /cv/engineering/)
+- PDF: https://franco-ortiz.com/Resume_Franco_ortiz.pdf
+
 ## Contact
 - Website: https://franco-ortiz.com
 - Email: fr.dv.ortiz@gmail.com

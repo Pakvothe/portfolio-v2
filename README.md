@@ -25,6 +25,7 @@ src/
 ├── layouts/Layout.astro       # Base layout, meta tags, SEO, global styles
 ├── pages/
 │   ├── index.astro            # Main page
+│   ├── cv/                    # Resume as HTML (hybrid, product, engineering)
 │   └── 404.astro              # Redirect to /
 ├── components/
 │   ├── Sidebar.astro          # Desktop sidebar + mobile bottom bar
@@ -53,6 +54,7 @@ bun install
 bun run dev       # Start dev server
 bun run build     # Build for production
 bun run preview   # Preview production build
+./scripts/build-cv.sh   # Regenerate the three resume PDFs in public/ (needs Chrome)
 ```
 
 ## Connect
