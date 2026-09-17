@@ -22,7 +22,7 @@ python3 - <<'PY'
 from pypdf import PdfReader, PdfWriter
 meta = {
  "Resume_Franco_ortiz.pdf": "Technical Product Manager, payments, cross-border fintech, engineering lead",
- "Resume_Franco_ortiz_Product.pdf": "Senior Product Manager, payments, cross-border fintech, OKRs, pricing",
+ "Resume_Franco_ortiz_Product.pdf": "Product Manager, payments, cross-border fintech, OKRs, pricing",
  "Resume_Franco_ortiz_Engineering.pdf": "Engineering Lead, React Native, mobile, engineering management, technical product manager",
 }
 for f, kw in meta.items():

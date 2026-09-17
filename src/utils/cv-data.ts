@@ -125,14 +125,14 @@ export const variants: Record<Variant, CvVariant> = {
     skills: [
       { label: "Product", items: ["Product Management", "Technical Product Management", "Payments", "Cross-border Payments", "OKRs", "Roadmaps", "Vendor Management", "Pricing"] },
       { label: "Data", items: ["SQL", "BigQuery", "Product Analytics"] },
-      { label: "Engineering", items: ["React Native", "React", "TypeScript", "Mobile Architecture", "Engineering Management", "AI agents (Claude Code, Cursor)"] },
+      { label: "Engineering", items: ["React Native", "React", "TypeScript", "Mobile Architecture", "Engineering Management", "AI agents (Claude Code)"] },
     ],
   },
   product: {
     slug: "product",
     fileName: "Resume_Franco_ortiz_Product.pdf",
     headline:
-      "Senior Product Manager · Payments & cross-border fintech · engineering background",
+      "Product Manager · Payments & cross-border fintech · engineering background",
     summary:
       "Product manager for cross-border payments at belo, a LatAm fintech with 3.5M+ users. I own the roadmap and OKRs of the squad (my format became the company standard), defined pricing principles adopted company-wide, and my analysis found revenue problems nobody was tracking. Four years leading the mobile team before this, so I write my own SQL and read the code before asking for an estimate.",
     roles: [
@@ -148,7 +148,7 @@ export const variants: Record<Variant, CvVariant> = {
     skills: [
       { label: "Product", items: ["Product Management", "Product Strategy", "Payments", "Cross-border Payments", "OKRs", "Roadmaps", "Pricing", "Vendor Management", "Stakeholder Management"] },
       { label: "Data", items: ["SQL", "BigQuery", "Product Analytics", "Metrics design"] },
-      { label: "Engineering", items: ["React Native", "TypeScript", "Mobile Architecture", "AI agents (Claude Code, Cursor)"] },
+      { label: "Engineering", items: ["React Native", "TypeScript", "Mobile Architecture", "AI agents (Claude Code)"] },
     ],
   },
   engineering: {
@@ -159,17 +159,17 @@ export const variants: Record<Variant, CvVariant> = {
     summary:
       "Engineering lead turned technical PM. Four years leading belo's frontend and mobile teams (3.5M+ users): led the Flutter to React Native rewrite in five months, built the team through hiring and performance reviews, owned mobile architecture. Since 2026 I run product for cross-border payments, which means I bring the business context into architecture decisions and still run planning for squads without a tech lead.",
     roles: [
-      leadRole([lead.rewrite, lead.team, lead.architecture, lead.web]),
       ptmRole(
-        "Product owner of the cross-border payments squad, still hands-on with architecture and data.",
+        "Run product for the cross-border payments squad, still hands-on with architecture and data.",
         [ptm.integration, ptm.planning, ptm.i18n, ptm.metric96, ptm.takeRate, ptm.analytics, ptm.okr],
       ),
+      leadRole([lead.rewrite, lead.team, lead.architecture, lead.web]),
       i1n,
       navent,
       aconpy,
     ],
     skills: [
-      { label: "Engineering", items: ["React Native", "React", "TypeScript", "Node.js", "Mobile Architecture", "iOS & Android releases", "CI/CD", "AI agents (Claude Code, Cursor)"] },
+      { label: "Engineering", items: ["React Native", "React", "TypeScript", "Node.js", "Mobile Architecture", "iOS & Android releases", "CI/CD", "AI agents (Claude Code)"] },
       { label: "Management", items: ["Engineering Management", "Hiring", "Performance Reviews", "Planning", "Technical Roadmaps"] },
       { label: "Product & data", items: ["Product Management", "OKRs", "Payments", "SQL", "BigQuery"] },
     ],
