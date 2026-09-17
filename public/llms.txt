@@ -1,24 +1,23 @@
 # Franco Ortiz
 
 ## About
-Franco Ortiz is a strategic technical leader based in Argentina. He is the CEO & Founder of i1n (i1n.ai), a localization-as-code platform, and Technical Product Manager at Belo, a crypto/fiat wallet with +3.5M users.
+Franco Ortiz is a Technical Product Manager based in Buenos Aires, Argentina. He runs product for the cross-border payments squad at belo (belo.app), a LatAm fintech with 3.5M+ users, after four years leading its frontend and mobile engineering. On the side he builds i1n (i1n.ai), a localization tool for React and React Native.
 
-## Current roles
-- CEO & Founder at i1n (i1n.ai) — Building localization infrastructure for modern development teams
-- Technical Product Manager at Belo (belo.app) — Bridging business goals and engineering execution for cross-border payment infrastructure
+## Current role
+- Technical Product Manager at belo (Feb 2026 - Present): roadmap and OKRs for cross-border payments; payment-provider integrations in new countries; planning for squads without a tech lead; own analysis in SQL. His OKR format became the company standard.
 
 ## Previous roles
-- Frontend & Mobile Lead at Belo (Feb 2022 - Feb 2026) — Led migration from Flutter to React Native for +3.5M users
-- Frontend Developer at Navent (May 2021 - Jan 2022) — Real estate platforms (Zonaprop, Imovelweb)
-- Frontend Developer at Aconpy (Feb 2021 - May 2021) — Virtual wallet project
+- Frontend & Mobile Lead at belo (Feb 2022 - Feb 2026): led the rewrite of the app from Flutter to React Native (3.5M users, five months); built and managed the frontend and mobile teams.
+- Frontend Developer at Navent (May 2021 - Jan 2022): Zonaprop and Imovelweb, React.
+- Frontend Developer at Aconpy (Feb 2021 - May 2021): Paiddly virtual wallet.
 
-## Key projects
-- i1n (https://i1n.ai) — Localization-as-code platform with CLI, dashboard, and AI-powered translation across 182 languages
-- Belo App (https://belo.app) — Crypto/Fiat wallet for Android and iOS with +3.5M users
+## Side project
+- i1n (https://i1n.ai): localization infrastructure for React and React Native stacks; landing, dashboard and npm CLI.
 
 ## Skills
-- Technical: React, React Native, TypeScript, Node.js, Next.js, Astro, Mobile Architecture, AI flows, CI/CD
-- Leadership: Roadmap Definition, Team Mentorship, GTM Strategy, Stakeholder Management, Product Analytics, Agile
+- Product: Product Management, Technical Product Management, Payments, Cross-border Payments, OKRs, Roadmaps, Vendor Management, SQL / BigQuery
+- Engineering: React Native, React, TypeScript, Mobile Architecture, Engineering Management, AI agents in the development workflow
+- Languages: Spanish (native), English (professional working proficiency)
 
 ## Contact
 - Website: https://franco-ortiz.com

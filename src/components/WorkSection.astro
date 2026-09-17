@@ -8,7 +8,7 @@ import { workData } from "../utils/work-data";
   class="max-w-[1040px] m-auto p-4 md:pl-14 lg:pl-8 py-16"
 >
   <h1 class="text-3xl sm:text-4xl font-bold text-center text-primary">Experience</h1>
-  <p class="mb-12 text-center text-secondary/60 text-sm mt-2">Where I've worked</p>
+  <p class="mb-12 text-center text-secondary/60 text-sm mt-2">Where I've worked and what changed because of it</p>
   {workData.map((work) => (
     <ol class="flex flex-col md:flex-row">
       <li class="mb-8">
@@ -28,15 +28,10 @@ import { workData } from "../utils/work-data";
         <p class="my-2 text-base font-normal text-secondary/80">
           {work.description}
         </p>
-        {work.description2 && (
-          <p class="my-2 text-base font-normal text-secondary/80">
-            {work.description2}
-          </p>
-        )}
-        {work.description3 && (
-          <p class="my-2 text-base font-normal text-secondary/80">
-            {work.description3}
-          </p>
+        {work.bullets && (
+          <ul class="my-2 ml-5 list-disc space-y-1 text-base font-normal text-secondary/80">
+            {work.bullets.map((b) => <li>{b}</li>)}
+          </ul>
         )}
       </li>
     </ol>

@@ -4,7 +4,7 @@
 
 ## Overview
 
-Personal portfolio for Franco Ortiz — Technical Product Manager, Frontend & Mobile Lead, and CEO & Founder of [i1n](https://i1n.ai).
+Personal portfolio for Franco Ortiz, Technical Product Manager at belo and ex Frontend & Mobile Lead. Side project: [i1n](https://i1n.ai).
 
 **Live:** [franco-ortiz.com](https://franco-ortiz.com/)
 
